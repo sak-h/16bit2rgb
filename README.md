@@ -1,5 +1,5 @@
 # 16bit2rgb
-A python script for 16 bit TIFF to 24bit RGB PNG conversion
+A python script for 16 bit TIFF to 24bit RGB PNG conversion.
 
 Accepting 16 bit .tiff files (ex. [the FLIR thermal dataset](https://www.flir.com/oem/adas/adas-dataset-form/)), the script outputs 24 bit RGB .png files.
 

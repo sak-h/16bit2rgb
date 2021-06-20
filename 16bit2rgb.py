@@ -26,7 +26,7 @@ min_val = 255**2 if args.min_val < 0 else args.min_val
 if args.max_val < 0 and args.min_val < 0:
     print('finding minmax values')
     for filepath in glob.glob(args.input_files):
-        print(' target file: ' + filepath)
+        print(' target file: %s' % filepath)
         img = cv2.imread(filepath, cv2.IMREAD_ANYDEPTH)
         ma = img.max()
         mi = img.min()
@@ -37,14 +37,14 @@ if args.max_val < 0 and args.min_val < 0:
 
 print('converting files')
 for filepath in glob.glob(args.input_files):
-    print(' target file: ' + filepath)
+    print(' target file: %s' % filepath)
     img = cv2.imread(filepath, cv2.IMREAD_ANYDEPTH)
     img = (img-min_val).astype('float64') / (max_val-min_val)
     img2 = (cmap(img) * 255).astype('uint8')
     img2 = cv2.cvtColor(img2, cv2.COLOR_RGB2BGR)
     filename = os.path.basename(filepath).replace('.tiff','.png')
     output_filename = os.path.join(args.out, filename)
-    print('  saving: ' + output_filename)
+    print('  saving: %s' % output_filename)
     cv2.imwrite(output_filename, img2)
 
 print('done (max: %d, min: %d)' % (max_val, min_val))
