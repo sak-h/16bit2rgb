@@ -6,9 +6,9 @@ import cv2
 from matplotlib import cm
 
 
-parser = argparse.ArgumentParser(description='convert_images.py')
-parser.add_argument('input_files', help='Target Image Files')
-parser.add_argument('--out', '-o', default='', help='Output Dir')
+parser = argparse.ArgumentParser(description='16bit2rgb.py: script for 16 bit TIFF to 24bit RGB PNG conversion')
+parser.add_argument('input_files', help='Input image Files (ex. '/img/*.tiff')')
+parser.add_argument('--out', '-o', default='', help='Output directory')
 parser.add_argument('--min_val', type=int, default=-1, help='Min value')
 parser.add_argument('--max_val', type=int, default=-1, help='Max value')
 parser.add_argument('--map', '-m', default='CMRmap', help='Colour Map')

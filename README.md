@@ -7,10 +7,11 @@ Accepting 16 bit .tiff files (ex. [the FLIR thermal dataset](https://www.flir.co
 ```
 python 16bit2rgb.py INPUT_FILE_PATH --out OUTPUT_DIR
 ```
+`INPUT_FILE_PATH` can be represented using a wild card (ex. `'/img/*.tiff'`).
 You can use the following options:
-- --out specify the output location (default: current directory)
-- --map specify the colour map named by matplotlib (default: CMRmap)
-- --min_val specify the minimum pixel value
-- --max_val specify the maximum pixel value
+- `--out` specify the output location (default: current directory)
+- `--map` specify the colour map named by matplotlib (default: `CMRmap`)
+- `--min_val` specify the minimum pixel value
+- `--max_val` specify the maximum pixel value
 
-If you specify both --min_val and --max_val, it skips to find those values. Otherwise, it tries to find those values in the specified files.
+If you specify both `--min_val` and `--max_val`, it skips to find those values. Otherwise, it tries to find those values in the specified files.
