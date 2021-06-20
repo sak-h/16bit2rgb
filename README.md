@@ -13,4 +13,4 @@ You can use the following options:
 - --min_val specify the minimum pixel value
 - --max_val specify the maximum pixel value
 
-If you specify both --min_val and --max_val, it skip to find those values. Otherwise, it tries to find those values in the specified files.
+If you specify both --min_val and --max_val, it skips to find those values. Otherwise, it tries to find those values in the specified files.
